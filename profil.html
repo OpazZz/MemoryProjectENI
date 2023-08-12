@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoryGame</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styleInscription.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1><span class="h1fin">ENI -</span><strong> MEMORY </strong> <span class="h1fin"> - Profil</span></h1>
+        <nav>
+            <ul class="menu">
+                <li class="nav"><a href="index.html">Accueil</a></li>
+                <li class="nav"><a href="inscription.html">S'inscrire</a></li>
+                <li class="nav"><a href="connexion.html">Se connecter</a></li>
+                <li class="nav"><a href="profil.html">Profil</a></li>
+                <li class="nav"><a href="jouer.html">Jouer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mainInscription">
+        <form class="blockFormulaire">
+            <legend>Profil</legend>
+            <div class="ImgProfil">
+                <img src="img/animauxdomestiques/2.jpg" alt="Image du profil">
+            </div>
+            <div class="form">
+                <label for="nomUtilisateur" id="nomUtil"> Nom d'utilisateur </label>
+                <div class="formChamps">
+                    <input type="text" name="name" class="formChamp" id="nomUtilisateur" pattern="[A-Za-z]{3,50}"
+                        placeholder="Votre nom">
+                </div>
+            </div>
+
+            <div class="form">
+                <label for="emailUtilisateur"> Entrez votre email</label>
+                <div class="formChamps">
+                    <input type="text" name="email" class="formChamp" id="emailUtilisateur"
+                        pattern="(\w+\.?|-?\w+?)+@\w+\.?-?\w+?(\.\w{2,3})+" placeholder="Votre email">
+                </div>
+            </div>
+            <div class="form">
+                <label>Choix du Memory</label>
+                <select id="choixMemory">
+                    <option value="">--Selectionnez le type de memory--</option>
+                    <option value="animaux">Animaux</option>
+                    <option value="animauxCartoon">Animaux animés</option>
+                    <option value="animauxDom">Animaux Domestiques</option>
+                    <option value="dog">Chiens</option>
+                    <option value="dinos">Dinosaures</option>
+                    <option value="legumes">Légumes</option>
+                    <option value="alphabet">Alphabet</option>
+                </select>
+            </div>
+            <div>
+                <img id="imageChoixMemory" src="img/animaux/memory_detail_animaux.png" alt="images de présentaion du jeu memory animaux">
+            </div>
+            <div class="form">
+                <label>Taille du Memory</label>
+                <select id="choixMemory">
+                    <option value="">--Selectionnez la taille du memory--</option>
+                    <option value="4*3">4*3</option>
+                    <option value="3*4">3*4</option>
+                    <option value="2*6">2*6</option>
+                </select>
+            </div>
+            <div class="boutonForm">
+                <a href="">
+                    <button type="button" class="btn" id="btnSaveOption">Enregistrez option</button>
+            </div>
+        </form>
+        <div>
+        </div>
+    </main>
+    <script src="scriptProfil.js"></script>
+</body>
+
+</html>

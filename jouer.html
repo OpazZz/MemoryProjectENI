@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MemoryGame</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="styleJouer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <h1><span class="h1fin">ENI -</span><strong> MEMORY </strong> <span class="h1fin"> -Jouer</span></h1>
+    <nav>
+      <ul class="menu">
+        <li class="nav"><a href="index.html">Accueil</a></li>
+        <li class="nav"><a href="inscription.html">S'inscrire</a></li>
+        <li class="nav"><a href="connexion.html">Se connecter</a></li>
+        <li class="nav"><a href="profil.html">Profil</a></li>
+        <li class="nav"><a href="jouer.html">Jouer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="mainJouer">
+    <main>
+      <div class="espaceJeu">
+        <div class="affichageScore">
+          <h2>Dernier meilleurs scores :</h2>
+          <table>
+            <tr class="titreTab">
+              <td>Pseudo</td>
+              <td>Score</td>
+              <td>Taille</td>
+              <td>Choix Memory</td>
+              <td>Date</td>
+            </tr>
+            <tr>
+              <td>ff@ff/ff</td>
+              <td>9</td>
+              <td>4par3</td>
+              <td>Légumes</td>
+              <td>28/04/2023</td>
+            </tr>
+            <tr>
+              <td>ff@ff/ff</td>
+              <td>10</td>
+              <td>4par3</td>
+              <td>Légumes</td>
+              <td>6</td>
+            </tr>
+          </table>
+          <p>Tentez de gagner avec le moins d'essais possible.</p>
+          <p>Appuyez sur la <strong>barre d'espace</strong> pour relancer le jeu.</p>
+          <p class="compteurTour">Nombre de coups : <span id="nbTour">0</span></p>
+        </div>
+        <div class="jeu">
+          <div class="box" id="1">
+            <div class="box-inner" id="carte1">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img class="pomme" src="img/memory-legume/1.svg">
+              </div>
+            </div>
+          </div>
+          <div class="box" id="2">
+            <div class="box-inner" id="carte2">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img class="banane" src="img/memory-legume/2.svg">
+              </div>
+            </div>
+          </div>
+          <div class="box" id="3">
+            <div class="box-inner" id="carte3">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img class="brocoli" src="img/memory-legume/3.svg">
+              </div>
+            </div>
+          </div>
+          <div class="box" id="4">
+            <div class="box-inner" id="carte4">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img class="cerise" src="img/memory-legume/4.svg">
+              </div>
+            </div>
+          </div>
+          <div class="box" id="5">
+            <div class="box-inner" id="carte5">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img src="img/memory-legume/5.svg">
+              </div>
+            </div>
+          </div>
+          <div class="box" id="6">
+            <div class="box-inner" id="carte6">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img class="fraise" src="img/memory-legume/6.svg">
+              </div>
+            </div>
+          </div>
+          <div class="box" id="7">
+            <div class="box-inner" id="carte1">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img src="img/memory-legume/1.svg">
+              </div>
+            </div>
+          </div>
+          <div class="box" id="8">
+            <div class="box-inner" id="carte2">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img src="img/memory-legume/2.svg">
+              </div>
+            </div>
+          </div>
+          <div class="box" id="9">
+            <div class="box-inner" id="carte3">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img src="img/memory-legume/3.svg">
+              </div>
+            </div>
+          </div>
+          <div class="box" id="10">
+            <div class="box-inner" id="carte4">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img src="img/memory-legume/4.svg">
+              </div>
+            </div>
+          </div>
+          <div class="box" id="11">
+            <div class="box-inner" id="carte5">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img src="img/memory-legume/5.svg">
+              </div>
+            </div>
+          </div>
+          <div class="box" id="12">
+            <div class="box-inner" id="carte6">
+              <div class="box-front">
+                <img src="img/question.svg">
+              </div>
+              <div class="box-back">
+                <img src="img/memory-legume/6.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </main>
+  <script src="scriptJouer.js"></script>
+</body>
+
+</html>
